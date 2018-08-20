@@ -24,7 +24,18 @@ int main()
 
 float f(float x)
 {
-  return x*log10f(x) - 1.2;
+  float ans;
+
+  ans = x*log10f(x) - 1.2;
+
+  //Checking if result is NAN
+  if (ans != ans)
+  {
+      printf("Cannot proceed further...Try changing the inteval\n");
+      exit (2);
+  }
+
+  return ans;
 }
 
 float secant(float a, float b)

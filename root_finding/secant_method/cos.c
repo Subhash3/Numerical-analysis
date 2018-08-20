@@ -24,7 +24,18 @@ int main()
 
 float f(float x)
 {
-  return 3*x - cosf(x) - 1;
+  float ans;
+
+  ans = 3*x - cosf(x) - 1;
+
+  //Checking if result is NAN
+  if (ans != ans)
+  {
+      printf("Cannot proceed further...Try changing the inteval\n");
+      exit (2);
+  }
+
+  return ans;
 }
 
 float secant(float a, float b)

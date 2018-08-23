@@ -1,0 +1,17 @@
+#!/bin/bash
+#usage <topdf> <file_name>
+
+if [ $# -ne 1 ]
+then
+	echo "Usage: topdf <file>"
+	exit 1
+fi
+
+#Output file without extension
+outfile=$(echo $1 | awk -F. '{print $1}')
+
+enscript -p ${outfile}.ps $1
+ps2pdf ${outfile}.ps ${outfile}.pdf
+
+rm ${outfile}.ps
+exit 0

@@ -13,3 +13,5 @@ Creates a '.ps' file based on file.ext where ext is any extension
 3. ps2pdf 
 Creates a pdf document based on '.ps' file created above.
 
+Also you can use topdf file to convert any file to a pdf document. It is just a bash script written based on the second and third command listed above.
+

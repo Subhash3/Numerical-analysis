@@ -2,6 +2,7 @@
 
 import matplotlib.pyplot as plt
 import math
+import numpy as np
 
 x = list()
 for j in range(10) :
